@@ -1,13 +1,13 @@
 {
   "reservations": {
     "1590958800000": {
-      "singleRoom": "1"
+      "double room": "1"
     },
     "1591131600000": {
-      "studioRoom": "1"
+      "studio room": "1"
     },
     "1591045200000": {
-      "doubleRoom": "1"
+      "single room": "1"
     }
   }
 }
