@@ -29,12 +29,18 @@ export default new Vuex.Store({
   },
   getters: {
     reservationsSorted: state => {
-      const reservationsKeysSorted = (Object.keys(state.reservations).sort((a, b) => Number(a) - Number(b)));
-      const reservationsSorted = {}
+      const reservationsKeysSorted = (Object.keys(state.reservations).sort((a, b) => a - b));
+      const reservationsSorted = []
       reservationsKeysSorted.forEach(time => {
-        reservationsSorted[time] = state.reservations[time]
+        reservationsSorted.push({[time]: state.reservations[time]})
       });
       return reservationsSorted;
+    },
+    bookedDays: (state, getters) => {
+      return getters.reservationsSorted.map(dayInfo => Object.values(dayInfo)[0].booked);
+    },
+    availableDays: (state, getters) => {
+      return getters.reservationsSorted.map(dayInfo => Object.values(dayInfo)[0].available);
     },
   }
 })
