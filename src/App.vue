@@ -8,6 +8,28 @@
   </div>
 </template>
 
+<script>
+import { mapActions } from "vuex";
+import {
+  ACTION_ROOMS_INFO,
+  ACTION_RESERVATIONS,
+} from "@/store/types.js";
+
+export default {
+  name: 'App',
+  methods: {
+    ...mapActions({
+      action_rooms_info: ACTION_ROOMS_INFO,
+      action_reservations: ACTION_RESERVATIONS,
+    })
+  },
+  mounted() {
+    this.action_reservations(require("@/assets/db/reservations.json").reservations)
+    this.action_rooms_info(require("@/assets/db/roomsInfo.json").roomsInfo)
+  }
+}
+</script>
+
 <style lang="sass">
 body
   margin: 0
