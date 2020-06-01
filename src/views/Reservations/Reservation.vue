@@ -1,36 +1,43 @@
 <template>
   <div>
-    <h3>{{date}}</h3>
-    <RoomBooked
-      v-for="(count, roomType) in reservation"
-      :key="roomType"
-      :count="count"
-      :roomType="roomType"
+    <h3><u>{{date}}</u></h3>
+
+    <BookedRooms
+      :bookedDays="bookedDays[index]"
+    />
+
+    <AvailableRoom
+      :availableDays="availableDays[index]"
     />
   </div>
 </template>
 
 <script>
-import RoomBooked from './RoomBooked.vue';
+import {mapGetters} from "vuex";
+import BookedRooms from './BookedRooms.vue';
+import AvailableRoom from './AvailableRoom.vue';
 
 export default {
   name: 'Reservation',
   components: {
-    RoomBooked,
+    BookedRooms,
+    AvailableRoom,
   },
   props: {
-    reservation: {
+    dayInfo: {
       type: Object,
       required: true,
     },
-    time: {
-      type: String,
+    index: {
+      type: Number,
       required: true,
     },
   },
   computed: {
+    ...mapGetters(["bookedDays", "availableDays"]),
     date() {
-      const date = new Date(Number(this.time))
+      const time = Number(Object.keys(this.dayInfo)[0])
+      const date = new Date(time)
       const day = date.getDate()
       const month = date.toLocaleString('default', { month: 'long' });
       const year = date.getFullYear()      
