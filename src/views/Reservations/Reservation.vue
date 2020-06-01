@@ -3,11 +3,11 @@
     <h3><u>{{date}}</u></h3>
 
     <BookedRooms
-      :bookedDays="bookedDays[index]"
+      :bookedDays="bookedDays"
     />
 
     <AvailableRoom
-      :availableDays="availableDays[index]"
+      :availableDays="availableDays"
     />
   </div>
 </template>
@@ -28,13 +28,16 @@ export default {
       type: Object,
       required: true,
     },
-    index: {
-      type: Number,
+    bookedDays: {
+      type: Object,
+      required: true,
+    },
+    availableDays: {
+      type: Object,
       required: true,
     },
   },
   computed: {
-    ...mapGetters(["bookedDays", "availableDays"]),
     date() {
       const time = Number(Object.keys(this.dayInfo)[0])
       const date = new Date(time)
