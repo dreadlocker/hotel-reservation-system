@@ -1,0 +1,19 @@
+{
+  "roomsInfo": {
+    "singleRoom": {
+      "count": "5",
+      "price": "30",
+      "discountedPrice": "27"
+    },
+    "doubleRoom": {
+      "count": "5",
+      "price": "40",
+      "discountedPrice": "36"
+    },
+    "studioRoom": {
+      "count": "5",
+      "price": "50",
+      "discountedPrice": "45"
+    }
+  }
+}
