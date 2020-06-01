@@ -1,0 +1,8 @@
+// TYPES_NODE
+export const ROOMS_INFO = "store/ROOMS_INFO";
+export const RESERVATIONS = "store/RESERVATIONS";
+
+
+// ACTIONS_NODE
+export const ACTION_ROOMS_INFO = "store/ACTION_ROOMS_INFO";
+export const ACTION_RESERVATIONS = "store/ACTION_RESERVATIONS";
