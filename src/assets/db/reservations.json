@@ -1,34 +1,40 @@
 {
-  "reservations": {
-    "1590958800000": {
-      "booked": {
-        "double room": 1
-      },
-      "available": {
-        "single room": 5,
-        "double room": 4,
-        "studio room": 5
+  "reservations": [
+    {
+      "1590958800000": {
+        "booked": {
+          "double room": 1
+        },
+        "available": {
+          "single room": 5,
+          "double room": 4,
+          "studio room": 5
+        }
       }
     },
-    "1591131600000": {
-      "booked": {
-        "studio room": 1
-      },
-      "available": {
-        "single room": 5,
-        "double room": 5,
-        "studio room": 4
+    {
+      "1591131600000": {
+        "booked": {
+          "studio room": 1
+        },
+        "available": {
+          "single room": 5,
+          "double room": 5,
+          "studio room": 4
+        }
       }
     },
-    "1591045200000": {
-      "booked": {
-        "single room": 1
-      },
-      "available": {
-        "single room": 4,
-        "double room": 5,
-        "studio room": 5
+    {
+      "1591045200000": {
+        "booked": {
+          "single room": 1
+        },
+        "available": {
+          "single room": 4,
+          "double room": 5,
+          "studio room": 5
+        }
       }
     }
-  }
+  ]
 }
