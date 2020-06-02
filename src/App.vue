@@ -13,6 +13,8 @@ import { mapActions } from "vuex";
 import {
   ACTION_ROOMS_INFO,
   ACTION_RESERVATIONS,
+  ACTION_BREAKFAST_PRICE,
+  ACTION_DINNER_PRICE,
 } from "@/store/types.js";
 
 export default {
@@ -21,11 +23,16 @@ export default {
     ...mapActions({
       action_rooms_info: ACTION_ROOMS_INFO,
       action_reservations: ACTION_RESERVATIONS,
+      action_breakfast_price: ACTION_BREAKFAST_PRICE,
+      action_dinner_price: ACTION_DINNER_PRICE,
     })
   },
   mounted() {
+    const hotelInfo = require("@/assets/db/hotelInfo.json")
     this.action_reservations(require("@/assets/db/reservations.json").reservations)
-    this.action_rooms_info(require("@/assets/db/roomsInfo.json").roomsInfo)
+    this.action_rooms_info(hotelInfo.roomsInfo)
+    this.action_breakfast_price(hotelInfo.breakfastPrice)
+    this.action_dinner_price(hotelInfo.dinnerPrice)
   }
 }
 </script>
