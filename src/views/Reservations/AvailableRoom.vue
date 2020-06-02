@@ -3,7 +3,7 @@
     <h3>Available rooms:</h3>
     
     <div
-      v-for="(roomCount, roomType) in availableDays"
+      v-for="(roomCount, roomType) in availableRooms"
       :key="roomType"
     ><span>{{roomType}} - </span><span>{{roomCount}}</span></div>
     <hr>
@@ -14,7 +14,7 @@
 export default {
   name: 'AvailableRoom',
   props: {
-    availableDays: {
+    availableRooms: {
       type: Object,
       required: true,
     },

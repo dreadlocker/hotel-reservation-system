@@ -4,8 +4,8 @@
       v-for="(dayInfo, index) in reservationsSorted"
       :key="Object.keys(dayInfo)[0]"
       :dayInfo="dayInfo"
-      :bookedDays="bookedDays[index]"
-      :availableDays="availableDays[index]"
+      :bookedRooms="bookedRooms[index]"
+      :availableRooms="availableRooms[index]"
     />
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
     Reservation,
   },
   computed: {
-    ...mapGetters(["reservationsSorted", "bookedDays", "availableDays"]),
+    ...mapGetters(["reservationsSorted", "bookedRooms", "availableRooms"]),
   },
 }
 </script>

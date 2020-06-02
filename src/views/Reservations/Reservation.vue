@@ -3,17 +3,16 @@
     <h3><u>{{date}}</u></h3>
 
     <BookedRooms
-      :bookedDays="bookedDays"
+      :bookedRooms="bookedRooms"
     />
 
     <AvailableRoom
-      :availableDays="availableDays"
+      :availableRooms="availableRooms"
     />
   </div>
 </template>
 
 <script>
-import {mapGetters} from "vuex";
 import BookedRooms from './BookedRooms.vue';
 import AvailableRoom from './AvailableRoom.vue';
 
@@ -28,11 +27,11 @@ export default {
       type: Object,
       required: true,
     },
-    bookedDays: {
+    bookedRooms: {
       type: Object,
       required: true,
     },
-    availableDays: {
+    availableRooms: {
       type: Object,
       required: true,
     },
