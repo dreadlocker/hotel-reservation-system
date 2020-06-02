@@ -1,8 +1,12 @@
 // TYPES_NODE
 export const ROOMS_INFO = "store/ROOMS_INFO";
 export const RESERVATIONS = "store/RESERVATIONS";
+export const BREAKFAST_PRICE = "store/BREAKFAST_PRICE";
+export const DINNER_PRICE = "store/DINNER_PRICE";
 
 
 // ACTIONS_NODE
 export const ACTION_ROOMS_INFO = "store/ACTION_ROOMS_INFO";
 export const ACTION_RESERVATIONS = "store/ACTION_RESERVATIONS";
+export const ACTION_BREAKFAST_PRICE = "store/ACTION_BREAKFAST_PRICE";
+export const ACTION_DINNER_PRICE = "store/ACTION_DINNER_PRICE";
